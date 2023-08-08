@@ -56,7 +56,7 @@ final class RefreshWorker {
   private static final Logger LOG = Logger.getInstance(RefreshWorker.class);
 
   private static final int ourParallelism =
-    MathUtil.clamp(Registry.intValue("vfs.refresh.worker.parallelism", 4), 1, Runtime.getRuntime().availableProcessors());
+    MathUtil.clamp(Registry.intValue("vfs.refresh.worker.parallelism", 6), 1, Runtime.getRuntime().availableProcessors());
   private static final ExecutorService ourExecutor =
     AppExecutorUtil.createBoundedApplicationPoolExecutor("VFS Refresh", ourParallelism);
 
